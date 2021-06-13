@@ -1,0 +1,109 @@
+.header-navbar {
+  &__btn {
+    width: 30px;
+    height: 22.5px;
+    position: relative;
+    margin: 25px 0 25px auto;
+    transform: rotate(0deg);
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+
+    @include md-min {
+      display: none;
+    }
+
+    &-row {
+      display: block;
+      position: absolute;
+      height: 4.5px;
+      width: 100%;
+      background: $color-light;
+      border-radius: 3px;
+      opacity: 1;
+      left: 0;
+      transform: rotate(0deg);
+      transition: 0.25s ease-in-out;
+
+      &:nth-child(1) {
+        top: 0px;
+      }
+
+      &:nth-child(2) {
+        top: 9px;
+      }
+
+      &:nth-child(3) {
+        top: 18px;
+      }
+    }
+
+    &--active span {
+      &:nth-child(1) {
+        top: 9px;
+        transform: rotate(135deg);
+      }
+
+      &:nth-child(2) {
+        opacity: 0;
+        left: -30px;
+      }
+
+      &:nth-child(3) {
+        top: 9px;
+        transform: rotate(-135deg);
+      }
+    }
+
+    
+  }
+
+  &__list {
+    @include unlist(0 -20px 0 0);
+
+    @include md-min {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
+      justify-content: end;
+    }
+
+    @include md {
+      display: none;
+      &--active {
+        display: block;
+        position: absolute;
+        top: 100%;
+        right: $gap * 2;
+        background-color: rgba($color-gray-dark, 0.9);
+        text-align: right;
+      }
+    }
+  }
+
+  &__item {
+    @include md-min {
+    margin: 0 $gap / 2;
+  }
+  @include md {
+    padding:  $gap ($gap / 2);
+  }
+  }
+
+  &__link {
+    display: block;
+    @include md-min {
+      padding: $gap / 2; 
+    }
+    @include md {
+      padding: ($gap / 2) $gap;
+    }
+   
+    font-size: 1.14rem;
+    letter-spacing: 0.081em;
+    transition: color 0.5s;
+
+    &:hover,
+    &:focus {
+      color: $color-accent;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+.header-menu {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    @include md {
+    background-color: rgba($color-gray-dark, 0.25);
+    box-shadow: 0 0 10x darken($color-gray-dark, 40%);
+  }
+  }
+  
+  .header-menu__container {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+
+   @extend %container;
+  }
+  
+ 

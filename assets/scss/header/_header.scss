@@ -1,0 +1,13 @@
+.header {
+    position: relative;
+    color: $color-light;
+    min-height: 100vh;
+    background-color: $color-primary;
+    background-image: url(../img/img-header.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 100px 0;
+    display: grid;
+    align-content: center;
+  }
