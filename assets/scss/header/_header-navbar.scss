@@ -7,11 +7,9 @@
     transform: rotate(0deg);
     transition: 0.5s ease-in-out;
     cursor: pointer;
-
     @include md-min {
       display: none;
     }
-
     &-row {
       display: block;
       position: absolute;
@@ -23,49 +21,38 @@
       left: 0;
       transform: rotate(0deg);
       transition: 0.25s ease-in-out;
-
       &:nth-child(1) {
         top: 0px;
       }
-
       &:nth-child(2) {
         top: 9px;
       }
-
       &:nth-child(3) {
         top: 18px;
       }
     }
-
     &--active span {
       &:nth-child(1) {
         top: 9px;
         transform: rotate(135deg);
       }
-
       &:nth-child(2) {
         opacity: 0;
         left: -30px;
       }
-
       &:nth-child(3) {
         top: 9px;
         transform: rotate(-135deg);
       }
     }
-
-    
   }
-
   &__list {
     @include unlist(0 -20px 0 0);
-
     @include md-min {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
       justify-content: end;
     }
-
     @include md {
       display: none;
       &--active {
@@ -78,16 +65,14 @@
       }
     }
   }
-
   &__item {
     @include md-min {
     margin: 0 $gap / 2;
   }
   @include md {
-    padding:  $gap ($gap / 2);
+    padding:  ($gap / 6) ($gap / 2);
   }
   }
-
   &__link {
     display: block;
     @include md-min {
