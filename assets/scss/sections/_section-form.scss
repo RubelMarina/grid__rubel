@@ -14,6 +14,7 @@
   }
   &-item {
     display: block;
+    
     &__input {
       display: block;
       width: 100%;
@@ -27,9 +28,9 @@
       letter-spacing: 0.15em;
       transition: background-color 0.5s, border-color 0.5s;
       font-size: 1.125rem;
-    &::placeholder {
-      color: rgba($color-light, 0.4);
-    }
+      &::placeholder {
+        color: rgba($color-light, 0.4);
+      }
       &:hover,
       &:focus {
         background-color: rgba($color-light, 0.15);
@@ -38,11 +39,6 @@
       }
       &:focus {
         outline: none;
-      }
-      &:nth-of-type(1) {
-        @include md-sm {
-          grid-column: 1 / span 2;
-        }
       }
     }
     & .btn--primary {
@@ -55,6 +51,11 @@
       &:focus {
         background-color: $color-accent;
         border: 2px solid $color-light;
+      }
+    }
+    &:nth-of-type(1) {
+      @include md-sm {
+        grid-column: 1 / span 2;
       }
     }
   }
