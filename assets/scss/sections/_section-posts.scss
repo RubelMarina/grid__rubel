@@ -40,7 +40,7 @@
     }
 
     @include md-sm {
-      grid-template-columns: 1fr, 1fr;
+      grid-template-columns: (1, 1fr);
       grid-template-areas: "p1 p2" "p3 p4" "p5 p6";
     }
 
@@ -56,7 +56,7 @@
 }
 
 .post-item {
-  background-color: color-gray;
+  background-color: $color-gray;
   @for $i from 1 through 6 {
     &:nth-child(#{$i}) {
       grid-area: p#{$i};

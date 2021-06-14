@@ -4,7 +4,7 @@
     width: 100%;
     @include md {
     background-color: rgba($color-gray-dark, 0.25);
-    box-shadow: 0 0 10x darken($color-gray-dark, 40%);
+    box-shadow: 0 0 10px darken($color-gray-dark, 40%);
   }
   }
   
